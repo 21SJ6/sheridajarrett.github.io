@@ -1,33 +1,287 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sherida Jarrett</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #0C6C38;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5rem;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div>
-    <h1>Sherida Jarrett</h1>
-    <p>Portfolio coming soon 🌿</p>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sherida Jarrett</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="#home" class="brand">
+        <img
+          src="images/favicon.png"
+          alt="Sherida Jarrett Logo"
+          class="brand-icon"
+        />
+        <span>Sherida Jarrett</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section class="artwork-slider" id="home">
+      <div class="art-slide active">
+        <img src="images/bloom_icon_mockup.jpg" alt="bloom icon mockup" />
+      </div>
+
+      <div class="art-slide">
+        <img src="images/completebloom.jpg" alt="complete bloom project" />
+      </div>
+
+      <div class="art-slide">
+        <img src="images/brochure_mockup.jpg" alt="brochure bruschetta" />
+      </div>
+
+      <div class="art-slide">
+        <img
+          src="images/iphone_hand_mockup_.jpg"
+          alt="cafezinho phone mockup"
+        />
+      </div>
+
+      <div class="art-slide">
+        <img src="images/streetmockup_m_p copy.jpg" alt="Mike Perry Poster" />
+      </div>
+
+      <div class="art-slide">
+        <img src="images/outlines.jpg" alt="Fruits Illustration" />
+      </div>
+
+      <div class="slider-text">
+        <div class="marquee">
+          <div class="marquee-track">
+            <div class="marquee-group">
+              <span>Graphic Design</span>
+              <span>✦</span>
+              <span>Web Design</span>
+              <span>✦</span>
+              <span>Front-End Development</span>
+              <span>✦</span>
+              <span>UI/UX Design</span>
+              <span>✦</span>
+            </div>
+
+            <div class="marquee-group" aria-hidden="true">
+              <span>Graphic Design</span>
+              <span>✦</span>
+              <span>Web Design</span>
+              <span>✦</span>
+              <span>Front-End Development</span>
+              <span>✦</span>
+              <span>UI/UX Design</span>
+              <span>✦</span>
+            </div>
+
+            <div class="marquee-group" aria-hidden="true">
+              <span>Graphic Design</span>
+              <span>✦</span>
+              <span>Web Design</span>
+              <span>✦</span>
+              <span>Front-End Development</span>
+              <span>✦</span>
+              <span>UI/UX Design</span>
+              <span>✦</span>
+            </div>
+
+            <div class="marquee-group" aria-hidden="true">
+              <span>Graphic Design</span>
+              <span>✦</span>
+              <span>Web Design</span>
+              <span>✦</span>
+              <span>Front-End Development</span>
+              <span>✦</span>
+              <span>UI/UX Design</span>
+              <span>✦</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <section class="hero" id="about">
+        <h1>About Me</h1>
+        <p>
+          I design digital experiences that transform ideas and emotions into
+          meaningful interactions. My curiosity leads me to explore new
+          techniques, helping me grow creatively in both design and front-end
+          development. At MCTC, I've focused on building responsive websites and
+          creating visual designs that are clear and easy to use. My work often
+          reflects calm, nature-inspired aesthetics, but I'm also drawn to
+          playful and unexpected ideas influenced by storytelling and internet
+          culture. I'm interested in designing and building for businesses,
+          events, and personal projects, with a focus on work that connects with
+          people as I continue to grow and explore new directions.
+        </p>
+        <div class="social-buttons">
+          <a
+            href="https://www.behance.net/sherij1"
+            class="social-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View Sherida Jarrett's Behance profile"
+          >
+            <img src="images/behance-icon.svg" alt="Behance icon" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/sherida-j-tec/"
+            class="social-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View Sherida Jarrett's LinkedIn profile"
+          >
+            <img src="images/linkedin-icon.svg" alt="LinkedIn icon" />
+          </a>
+        </div>
+      </section>
+      <section class="portfolio-section" id="portfolio">
+        <div class="portfolio-heading">
+          <h1>Portfolio</h1>
+          <p>
+            A collection of selected work in web design, typography,
+            illustration, and mockups.
+          </p>
+        </div>
+
+        <div class="portfolio-filters">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="web">Web Design</button>
+          <button class="filter-button" data-filter="typography">
+            Typography
+          </button>
+          <button class="filter-button" data-filter="illustration">
+            Illustration
+          </button>
+          <button class="filter-button" data-filter="mockup">Mockups</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card" data-category="web">
+            <img
+              src="images/iphone_hand_mockup_.jpg"
+              alt="Cafezinho website design"
+            />
+            <div class="portfolio-card-text">
+              <h2>Cafezinho</h2>
+              <p>Responsive botanical coffee shop website.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="illustration">
+            <img src="images/outlines.jpg" alt="Fruit illustration project" />
+            <div class="portfolio-card-text">
+              <h2>Fruit Illustration</h2>
+              <p>Digital illustration with playful organic forms.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="mockup">
+            <img
+              src="images/bloom_icon_mockup.jpg"
+              alt="Bloom app icon mockup"
+            />
+            <div class="portfolio-card-text">
+              <h2>Bloom Mockup</h2>
+              <p>App icon and visual identity presentation.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="typography">
+            <img
+              src="images/streetmockup_m_p copy.jpg"
+              alt="Typography poster design"
+            />
+            <div class="portfolio-card-text">
+              <h2>Poster Design</h2>
+              <p>Expressive typography and visual composition.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-category="mockup">
+            <img
+              src="images/brochure_mockup.jpg"
+              alt="Bruschetta brochure mockup"
+            />
+            <div class="portfolio-card-text">
+              <h2>Bruschetta Brochure Mockup</h2>
+              <p>
+                Printed brochure mockup created to present layout, typography,
+                and visual design.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <section class="contact-section" id="contact">
+      <div class="contact-heading">
+        <h1>Contact</h1>
+        <p>
+          Have a project, collaboration, or design opportunity in mind? Send me
+          a message and I’ll get back to you by email.
+        </p>
+      </div>
+
+      <form
+        class="contact-form"
+        action="mailto:sheridajarretttec@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name..."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email address..."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Project inquiry..."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell me about your project..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="contact-button">Submit</button>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+  <footer class="site-footer">
+    <p>© 2026 Sherida Jarrett. All rights reserved.</p>
+  </footer>
 </html>
