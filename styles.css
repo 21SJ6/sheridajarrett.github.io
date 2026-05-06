@@ -315,6 +315,101 @@ body {
   }
 }
 
+/* PROJECT LIGHTBOX */
+.portfolio-card {
+  cursor: pointer;
+}
+
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+}
+
+.project-lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  width: min(1000px, 95%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: #182025;
+  border-radius: 28px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-image {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  display: block;
+}
+
+.lightbox-text {
+  padding: 28px;
+  color: #f4f1ea;
+}
+
+.lightbox-text h2 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.lightbox-text p {
+  margin: 0;
+  color: #d6d0c7;
+  line-height: 1.6;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: #b8eadb;
+  color: #101719;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.lightbox-close:hover {
+  background-color: #ffffff;
+}
+
+.project-details {
+  display: none;
+}
+
+.lightbox-details {
+  margin-top: 28px;
+}
+
+.lightbox-details h3 {
+  margin: 24px 0 10px;
+  color: #b8eadb;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.lightbox-details p {
+  color: #d6d0c7;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
 /* CONTACT SECTION */
 .contact-section {
   padding: 110px 8%;
@@ -444,4 +539,206 @@ body {
 .site-footer p {
   margin: 0;
   font-size: 0.95rem;
+}
+
+/* =========================
+   RESPONSIVE STYLES
+   ========================= */
+
+/* LAPTOPS / SMALL DESKTOPS */
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .artwork-slider {
+    min-height: 620px;
+  }
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .site-header {
+    height: auto;
+    padding: 22px 6%;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .brand {
+    font-size: 1.7rem;
+  }
+
+  .brand-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-links {
+    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .artwork-slider {
+    height: 75vh;
+    min-height: 520px;
+  }
+
+  .hero,
+  .portfolio-section,
+  .contact-section {
+    padding: 85px 6%;
+  }
+
+  .hero h1,
+  .portfolio-heading h1,
+  .contact-heading h1 {
+    font-size: 3.3rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lightbox-content {
+    width: 95%;
+  }
+}
+
+/* PHONES */
+@media (max-width: 650px) {
+  .site-header {
+    padding: 18px 5%;
+  }
+
+  .brand {
+    font-size: 1.4rem;
+  }
+
+  .brand-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .artwork-slider {
+    height: 65vh;
+    min-height: 420px;
+  }
+
+  .slider-text {
+    padding: 14px 0;
+  }
+
+  .marquee-group span {
+    font-size: 0.85rem;
+  }
+
+  .hero,
+  .portfolio-section,
+  .contact-section {
+    padding: 70px 5%;
+  }
+
+  .hero h1,
+  .portfolio-heading h1,
+  .contact-heading h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero p,
+  .portfolio-heading p,
+  .contact-heading p {
+    font-size: 1rem;
+  }
+
+  .social-buttons {
+    gap: 14px;
+  }
+
+  .social-button {
+    width: 52px;
+    height: 52px;
+  }
+
+  .portfolio-filters {
+    gap: 10px;
+  }
+
+  .filter-button {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-card img {
+    height: 240px;
+  }
+
+  .project-lightbox {
+    padding: 20px;
+  }
+
+  .lightbox-content {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .lightbox-image {
+    max-height: 420px;
+  }
+
+  .lightbox-text {
+    padding: 22px;
+  }
+
+  .lightbox-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 16px;
+  }
+
+  .site-footer {
+    padding: 26px 5%;
+  }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 420px) {
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  .hero h1,
+  .portfolio-heading h1,
+  .contact-heading h1 {
+    font-size: 2.3rem;
+  }
+
+  .artwork-slider {
+    height: 58vh;
+    min-height: 360px;
+  }
+
+  .portfolio-card img {
+    height: 210px;
+  }
 }

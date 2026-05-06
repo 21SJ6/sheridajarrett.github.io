@@ -40,3 +40,53 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+const projectCards = document.querySelectorAll(".portfolio-card");
+const projectLightbox = document.querySelector("#projectLightbox");
+const lightboxImage = document.querySelector(".lightbox-image");
+const lightboxTitle = document.querySelector(".lightbox-text h2");
+const lightboxDescription = document.querySelector(".lightbox-text p");
+const lightboxDetails = document.querySelector(".lightbox-details");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+projectCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const projectImage = card.querySelector("img");
+    const projectTitle = card.querySelector(".portfolio-card-text h2");
+    const projectDescription = card.querySelector(".portfolio-card-text p");
+    const projectDetails = card.querySelector(".project-details");
+
+    lightboxImage.src = projectImage.src;
+    lightboxImage.alt = projectImage.alt;
+    lightboxTitle.textContent = projectTitle.textContent;
+    lightboxDescription.textContent = projectDescription.textContent;
+
+    if (projectDetails) {
+      lightboxDetails.innerHTML = projectDetails.innerHTML;
+    } else {
+      lightboxDetails.innerHTML = "";
+    }
+
+    projectLightbox.classList.add("active");
+    projectLightbox.setAttribute("aria-hidden", "false");
+  });
+});
+
+function closeLightbox() {
+  projectLightbox.classList.remove("active");
+  projectLightbox.setAttribute("aria-hidden", "true");
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+
+projectLightbox.addEventListener("click", (event) => {
+  if (event.target === projectLightbox) {
+    closeLightbox();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
+});
