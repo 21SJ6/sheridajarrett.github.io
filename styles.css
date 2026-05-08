@@ -531,6 +531,43 @@ body {
   color: #b8eadb;
 }
 
+.contact-backup {
+  margin-top: 28px;
+  color: #d6d0c7;
+  font-size: 1rem;
+}
+
+.contact-backup a {
+  color: #b8eadb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-backup a:hover {
+  text-decoration: underline;
+}
+
+.email-button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background-color: #b8eadb;
+  color: #101719;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.email-button:hover {
+  transform: translateY(-4px);
+  background-color: #ffffff;
+}
+
 /* CONTACT RESPONSIVE */
 @media (max-width: 700px) {
   .contact-section {
